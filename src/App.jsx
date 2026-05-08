@@ -64,7 +64,7 @@ const KPI_TILES = [
   },
   {
     label: "Q2'26 BFSI REVENUE OWNED",
-    value: '$3.0M',
+    value: '$2.91M',
     sub: 'Weekly WoW cadence to Amar Duggal, account-level variance reporting',
     icon: TrendingUp,
     accent: 'teal',
@@ -73,28 +73,30 @@ const KPI_TILES = [
       blurb: 'End-to-end ownership of the BFSI vertical\'s quarterly forecasting, with a weekly WoW cadence to Amar Duggal and account-level variance reporting after every monthly close.',
       sections: [
         {
-          heading: 'Quarterly forecast targets',
+          heading: 'FY26 forecast trajectory',
           items: [
-            { strong: "Q1'26", text: 'Locked at $2.21M (+$10.6K from new March devs)' },
-            { strong: "Q2'26 — 90% confidence case", text: '$3.43M' },
-            { strong: "Q2'26 — upside case", text: '$4.07M' },
+            { strong: "Q1'26 — actualized", text: '$1.78M (Jan–Mar 2026)' },
+            { strong: "Q2'26 — forecast", text: '$2.91M' },
+            { strong: "Q3'26 — forecast", text: '$2.99M' },
+            { strong: "Q4'26 — forecast", text: '$2.96M' },
+            { strong: "FY26 total — forecast", text: '~$10.65M across the BFSI vertical' },
           ]
         },
         {
-          heading: 'Account-level forecast (Q2\'26)',
+          heading: 'Account-level Q1\'26 actuals',
           items: [
-            { strong: 'Apollo', text: 'Largest BFSI account, weekly tracked, $601K April actuals vs $603K forecast' },
-            { strong: 'BlackRock', text: 'Account-level variance reported after April close' },
-            { strong: 'Goldman Sachs', text: 'Active recruiting pipeline tied to forecast' },
-            { strong: 'ADS Securities', text: '$89K April actuals vs $92K forecast' },
-            { strong: 'CBRE', text: 'Caught $585K shift to Emerging Org with one week of lead time' },
+            { strong: 'Apollo Global Management', text: '$1.48M — largest BFSI account, weekly tracked' },
+            { strong: 'ADS Securities', text: '$189K' },
+            { strong: 'BlackRock', text: '$112K — variance reported with full root-cause' },
+            { strong: 'Fiserv', text: 'Onboarding in progress' },
           ]
         },
         {
           heading: 'Operating cadence',
           items: [
             { strong: 'Weekly WoW delta report to Amar', text: 'initiated April 15 — quarterly forecast, weekly change, commentary, account-level breakdown' },
-            { strong: 'Account-level variance reporting', text: 'completed for April close across Apollo, BlackRock, ADS Securities' },
+            { strong: 'CBRE early-warning catch', text: 'flagged a $585K shift from BFSI to Emerging Org with one week of lead time, before it hit the close' },
+            { strong: 'Account-level variance reporting', text: 'completed for the Q1\'26 close across Apollo, BlackRock, ADS Securities' },
             { strong: 'Mandatory rate-type verification', text: 'documented step in the monthly close workflow (T&M vs fixed-monthly vs daily)' },
           ]
         }
@@ -148,7 +150,7 @@ const KPI_TILES = [
           heading: 'FY25/26 delivered',
           items: [
             { strong: 'BFSI Master Platform', text: '4,658-line production React app, 6 modules, role-gated, live for senior leadership' },
-            { strong: 'BFSI revenue ownership', text: '$3.0M Q2\'26 forecast, weekly cadence, account-level variance reporting' },
+            { strong: 'BFSI revenue ownership', text: '$1.78M Q1\'26 actualized, $2.91M Q2\'26 forecast, weekly cadence, account-level variance reporting' },
             { strong: 'Outbound Reporting Initiative', text: 'Cross-channel reporting across 5 channels, live Jan 1, 2026' },
             { strong: 'Ti Projects Sales Dashboard', text: 'SF-native dashboard rolled out to AEs across TI Projects' },
             { strong: 'Salesforce attribution diagnosis + fixes', text: 'AE/SDR campaign overlap, lead duplication, Email-ID-as-key proposal' },
@@ -180,7 +182,7 @@ const QUESTIONS = [
         heading: 'Where I had the most impact',
         bullets: [
           { strong: 'BFSI Master Platform', text: ' — conceived, built, and shipped the live React web application with six modules (Revenue Forecast, Talent Pool, Recruiting, P&L, Burn Sheets, Delivery), role-based access (Leadership/Finance/TA/Delivery), live Google Sheets data via Apps Script middleware, and branded PDF burn-sheet export. Now in alignment conversations with Daniel Harron\'s broader TI Platform.', link: { url: 'https://bfsi-web-app.netlify.app/', label: 'View live →' } },
-          { strong: 'BFSI revenue forecast ownership', text: ' — Q1\'26 locked at $2.21M (+$10.6K from new March devs); Q2\'26 90% case $3.43M, upside $4.07M. Initiated and now run a weekly WoW forecast cadence to Amar Duggal. April close completed with full account-level variance reporting (Apollo, BlackRock, ADS Securities).' },
+          { strong: 'BFSI revenue forecast ownership', text: ' — Q1\'26 actualized at $1.78M, with Apollo Global Management at $1.48M, ADS Securities at $189K, and BlackRock at $112K. Q2\'26 forecast at $2.91M, with the FY26 BFSI vertical tracking to ~$10.65M total. Initiated and now run a weekly WoW forecast cadence to Amar Duggal, with full account-level variance reporting after every monthly close.' },
           { strong: 'Outbound Reporting Initiative', text: ' — centralized cross-channel reporting across SDR cadences, AE cadences, Job Recruiter Campaigns, Paid Marketing, and Email; auto-refresh every 24 hours; operationalized January 1, 2026. Coordinated with Abhilash Kandwal, Aditya Bam, Madhan Kumar, and Kal Bowers without a project manager.' },
           { strong: 'Ti Projects Sales Dashboard', text: ' — Salesforce-native one-stop dashboard rolled out to TI Projects AEs (Dave Critchley, Erika Rhinehart, Joydip Mukherji) on September 30, 2025. Active devs and billing rates, opportunities, deals won, pipeline, and Tradeshow/Event leads — all filtered to Account Owner.' },
           { strong: 'Diagnosis of broken lead-to-opportunity attribution', text: ' — identified and documented the AE/SDR campaign overlap, lead duplication, and missing unique-identifier issues across Salesforce; proposed Email-ID-as-key and sister-campaign separation as the fixes.' },
@@ -188,7 +190,7 @@ const QUESTIONS = [
       },
       {
         heading: 'Where I fell short',
-        prose: 'Honest answer: my biggest growth area this year was preparing to show up articulately in high-stakes meetings with executive leadership. When updates land in front of busy senior stakeholders like Amar Duggal, brevity and clarity matter as much as substance. I have been actively working on this and have adopted a Bottom-Line-Up-Front (BLUF) format — every major update now leads with [Topic | Date], a one-line summary, then details. The structure is now consistent; the length is still longer than it should be. This remains my most active iteration loop.'
+        prose: 'Honest answer: my biggest growth area this year was learning to walk into high-stakes leadership conversations with the strategic ask, recommendation, and stakeholder alignment already in motion — not just the substance. The shift from briefing senior leaders on what I have done to framing the one decision that needs to be made is the difference between IC4 work and IC6 work, and it is the part of the role I am most actively developing. The work this year has given me the substance; the next step is consistently turning that substance into the clearest possible recommendation, walked through with the right people, before the room gets together.'
       }
     ]
   },
@@ -209,7 +211,7 @@ const QUESTIONS = [
       },
       {
         heading: 'Where I could have embodied them more — Work with Joy',
-        prose: 'During the heaviest stretches of the platform build and weekly forecast cycles, I defaulted to grinding through alone. The values doc says "loving the process is what makes it last" — I was loving the build, but I did not bring my immediate team (Shubhodhay, Michael) into the joy of the wins as deliberately as I could have. Going into next year I want to be more intentional about celebrating shipped work as a team event, not a private one. It is a small change but it changes the culture of how the work feels.'
+        prose: 'During the heaviest stretches of the platform build and weekly forecast cycles, I defaulted to grinding through alone. The Turing values say "loving the process is what makes it last" — I was loving the build, but I did not bring my immediate team (Shubhodhay, Michael) into the joy of the wins as deliberately as I could have. Going into next year I want to be more intentional about celebrating shipped work as a team event, not a private one. It is a small change but it changes the culture of how the work feels.'
       }
     ]
   },
@@ -266,7 +268,7 @@ const QUARTERS = [
     period: 'Jan – Mar 2026',
     headline: 'Owning BFSI revenue forecasting',
     initiatives: [
-      { title: 'BFSI quarterly forecast', impact: 'Q1\'26 locked at $2.21M (+$10.6K from new March devs); Q2\'26 90% case $3.43M, upside $4.07M. Account and SOW-level breakdowns embedded into weekly review with Amar.' },
+      { title: 'BFSI quarterly forecast', impact: 'Q1\'26 actualized at $1.78M (Apollo $1.48M, ADS Securities $189K, BlackRock $112K). Q2\'26 forecast $2.91M; FY26 BFSI tracking to ~$10.65M total. Account and SOW-level breakdowns embedded into weekly review with Amar.' },
       { title: 'Churn and revenue analytics', impact: 'Churned-accounts pivot from January 2025 onward; Actuals vs Forecasted Revenue and Marketing Spend tabs added to dashboard sheet.' },
       { title: 'Salesforce Talent vs Projects reconciliation', impact: 'Cleanup across Rivian, CBRE, Aircall, Annalect — devs incorrectly tagged in either direction surfaced and corrected.' },
     ]
@@ -317,7 +319,7 @@ const BENCHMARKS = [
     short: 'Communication',
     desc: 'Always knows the desired outcome before communicating, and has a clear communication path planned to achieve the outcome. Has stakeholder buy-in before they even know the problem/solution.',
     last: { status: 'wip', text: 'Needed guidance initially with stakeholder alignment and concise communication.' },
-    now: { status: 'wip', text: 'Adopted a Bottom-Line-Up-Front (BLUF) writing pattern — every major update now leads with [Topic | Date], a one-line headline, then details. Still iterating on length, but the structure is in place. Stakeholder buy-in pre-built for the BFSI Platform via calibration loops with Amar/Rahul before each module shipped.' },
+    now: { status: 'wip', text: 'Actively developing the executive presence to walk into senior leadership conversations with the recommendation, ask, and stakeholder pre-alignment already in motion — not just the substance. Stakeholder buy-in for the BFSI Platform pre-built via calibration loops with Amar and Rahul before each module shipped, which is the same pattern applied at the room scale.' },
   },
   {
     name: 'Autonomy',
@@ -329,7 +331,7 @@ const BENCHMARKS = [
 ]
 
 const FEEDBACK = [
-  { item: 'Brevity in written communication, especially with senior stakeholders', progress: 'Adopted a Bottom-Line-Up-Front (BLUF) format for all updates: messages now lead with [Topic | Date], a one-line headline summary, then details. Continuing to refine length. My biggest active growth area.' },
+  { item: 'Brevity and clarity in written communication, especially with senior stakeholders', progress: 'Shifting from briefing senior leaders on completed work to framing the one decision that needs to be made — pre-aligned with the right stakeholders before the conversation. The BFSI Platform calibration loops with Amar and Rahul are an early example of this pattern in motion. My biggest active growth area.' },
   { item: 'Stakeholder collaboration before building', progress: 'Built the BFSI Platform module-by-module with calibration loops at each step. April 22 update to Rahul Bora is a clean example: shipped fixes for slow loading, drill-downs, and recruiting module updates the same day based on his direct feedback.' },
   { item: 'Adoption over output', progress: 'Internalized as the operating principle for the BFSI Platform. Weekly BFSI forecast cadence (initiated April 15) is the adoption vehicle — reporting structure that gets used every week, not a dashboard that sits idle.' },
   { item: 'Asking questions from a management PoV when building systems', progress: 'Self-flagged BigQuery baseline issues to Olivia/Emily/Connor before relying on them; questioned data lineage on the Vinal Mishra BFSI sheet before consuming it; structured the platform around role-based access from day one rather than retrofitting.' },
@@ -340,7 +342,7 @@ const FORWARD_ASKS = [
   { title: 'Unified TI Platform partnership', text: 'Co-own the integration of the BFSI Platform with Daniel Harron\'s broader TI Platform — expand the role-based, live-data, branded-export pattern across other verticals (Emerging, Enterprise).' },
   { title: 'Forecast precision as a function-wide standard', text: 'Extend the weekly WoW cadence pattern to other verticals, with the BFSI variance-tracking workflow as the template.' },
   { title: 'AI-native operations as a discipline', text: 'Formalize the pair-programming and self-DM-workspace patterns that made this year\'s volume possible, and bring the rest of the RevOps team into the same operating model.' },
-  { title: 'Communication as the last unblock', text: 'Get from "BLUF format adopted" to "length consistently right for senior stakeholders." Concrete, measurable, the one growth area that matters most for IC6 effectiveness at the scope I\'m now operating at.' },
+  { title: 'Executive presence as the last unblock', text: 'Move from delivering substance to leading the room. Walk into senior leadership conversations with the recommendation, the ask, and stakeholder alignment already pre-built. The growth area that matters most for IC6 effectiveness at the scope I\'m now operating at.' },
 ]
 
 // ============================================================================
@@ -635,6 +637,17 @@ function DrilldownModal({ tile, onClose }) {
               <ExternalLink size={14} />
             </a>
           )}
+        </div>
+
+        {/* Footer with Close button (matches BFSI pattern) */}
+        <div className="modal-footer">
+          <button
+            type="button"
+            onClick={onClose}
+            className="modal-footer-close"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
@@ -1179,8 +1192,7 @@ export default function App() {
             marginTop: 96, paddingTop: 32, borderTop: '1px solid #ededed',
             textAlign: 'center', fontSize: 12, color: '#888'
           }}>
-            <div style={{ marginBottom: 4 }}>Built by Gaurav · FY 2025/26 Year in Review</div>
-            <div>Visual language adapted from the BFSI Master Platform · Turing.com design system</div>
+            <div>Built by Gaurav · FY 2025/26 Year in Review</div>
           </footer>
         </div>
       </main>
