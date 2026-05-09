@@ -245,8 +245,8 @@ const QUARTERS = [
     period: 'Jul – Sep 2025',
     headline: 'Setting the foundation',
     initiatives: [
-      { title: 'Ti Projects Sales Dashboard rollout', impact: 'Salesforce-native dashboard rolled out to TI Projects AEs on Sept 30, 2025 — Dave Critchley, Erika Rhinehart, Joydip Mukherji. Personalized walkthrough per AE, instant adoption.' },
-      { title: 'Problem Solving call series', impact: 'Curated cross-functional analytical forum — Matching System walkthrough with Aneel, Marketing Team intros with Maya. Established a regular venue for cross-team alignment.' },
+      { title: 'Ti Projects Sales Dashboard rollout', impact: 'Salesforce-native dashboard rolled out to TI Projects AEs Sept 30, 2025. Instant adoption.' },
+      { title: 'Problem Solving call series', impact: 'Curated cross-functional analytical forum for cross-team alignment.' },
     ]
   },
   {
@@ -255,11 +255,11 @@ const QUARTERS = [
     period: 'Oct – Dec 2025',
     headline: 'Scaling outbound and fulfillment visibility',
     initiatives: [
-      { title: 'Outbound Reporting Initiative', impact: 'Cross-channel reporting across SDR, AE, Job Recruiter, Paid Marketing, Email channels. Master Reporting Tracker with auto-refresh every 24 hours, live January 1, 2026.' },
-      { title: 'Lead-to-opportunity attribution diagnosis', impact: 'Identified AE/SDR campaign overlap, lead duplication, and broken attribution. Proposed Email-ID-as-key and sister-campaign solutions with Madhan Kumar.' },
-      { title: 'Fulfillment Funnel for Ivan', impact: 'Built Funnel by Reps (last 2 months + YTD), detailed Packets/Interview funnel views — partnered with Nishad Acharya.' },
-      { title: 'Talent Active Devs / Starts / Stops dashboards', impact: 'AE-level metrics, Account-level Starts/Stops, Active Devs M-o-M for Rahul Bora. Worked through SF reconciliation issues.' },
-      { title: '2026 Forecasting setup', impact: 'Aligned Olivia, Emily, Connor on BigQuery baseline issues — 80 misclassified Staff Aug devs, daily-hours assumptions, customer-rate source. Locked the model before year flip.' },
+      { title: 'Outbound Reporting Initiative', impact: 'Cross-channel reporting (SDR, AE, Recruiter, Marketing, Email) with 24-hour auto-refresh — live Jan 1, 2026.' },
+      { title: 'Lead-to-opportunity attribution diagnosis', impact: 'Diagnosed AE/SDR campaign overlap; proposed Email-ID-as-key fix with Madhan Kumar.' },
+      { title: 'Fulfillment Funnel for Ivan', impact: 'Funnel by Reps + Packets/Interview detail views — partnered with Nishad Acharya.' },
+      { title: 'Talent Active Devs / Starts / Stops dashboards', impact: 'AE-level and Account-level metrics for Rahul Bora.' },
+      { title: '2026 Forecasting setup', impact: 'Aligned Olivia, Emily, Connor on BigQuery baseline — corrected 80 misclassified Staff Aug devs before year flip.' },
     ]
   },
   {
@@ -268,9 +268,9 @@ const QUARTERS = [
     period: 'Jan – Mar 2026',
     headline: 'Owning BFSI revenue forecasting',
     initiatives: [
-      { title: 'BFSI quarterly forecast', impact: 'Q1\'26 actualized at $1.78M (Apollo $1.48M, ADS Securities $189K, BlackRock $112K). Q2\'26 forecast $2.91M; FY26 BFSI tracking to ~$10.65M total. Account and SOW-level breakdowns embedded into weekly review with Amar.' },
-      { title: 'Churn and revenue analytics', impact: 'Churned-accounts pivot from January 2025 onward; Actuals vs Forecasted Revenue and Marketing Spend tabs added to dashboard sheet.' },
-      { title: 'Salesforce Talent vs Projects reconciliation', impact: 'Cleanup across Rivian, CBRE, Aircall, Annalect — devs incorrectly tagged in either direction surfaced and corrected.' },
+      { title: 'BFSI quarterly forecast', impact: 'Q1\'26 actualized at $1.78M (Apollo $1.48M, ADS $189K, BlackRock $112K). Q2\'26 forecast $2.91M; FY26 BFSI ~$10.65M. Embedded in weekly review with Amar.' },
+      { title: 'Churn and revenue analytics', impact: 'Churned-accounts pivot from Jan 2025; Actuals vs Forecasted Revenue tabs added.' },
+      { title: 'Salesforce Talent vs Projects reconciliation', impact: 'Cleanup across Rivian, CBRE, Aircall, Annalect — incorrectly tagged devs corrected.' },
     ]
   },
   {
@@ -279,11 +279,11 @@ const QUARTERS = [
     period: 'Apr 2026 — QTD',
     headline: 'The IC6 leap: BFSI Master Platform',
     initiatives: [
-      { title: 'BFSI Master Platform — shipped', impact: 'Live React platform with 6 modules, role-based access (Leadership/Finance/Fulfillment/Delivery), Apps Script middleware for live data, branded PDF burn-sheet export. Calibration loops with Amar and Rahul before each module shipped.', link: { url: 'https://bfsi-web-app.netlify.app/', label: 'View platform →' } },
-      { title: 'Weekly BFSI forecast cadence', impact: 'Initiated April 15 — every week Amar gets a structured WoW delta with quarterly forecast, weekly change, commentary, and account-level breakdown. Caught the $585K CBRE shift to Emerging Org with a week of lead time.' },
-      { title: 'BFSI board deck for Jon and senior leadership', impact: 'Co-built v1 with Amar and Rahul; partnered with Tara Hildabrant and Kal Bowers to brand-align. Sourced account-level wins narrative from Rahul Gupte for Apollo, BlackRock, Goldman Sachs.' },
-      { title: 'BFSI dev tagging cleanup in COR sheet', impact: 'Corrected tagging across Apollo, BlackRock, Goldman, CBRE devs (TI Projects vs Bench) for consistent downstream finance reporting.' },
-      { title: 'Daniel Harron alignment', impact: 'Initiated conversations to sync the BFSI Platform with the broader TI Platform roadmap — avoid duplicated effort, define integration path.' },
+      { title: 'BFSI Master Platform — shipped', impact: 'Live React platform: 6 modules, role-based access, live data via Apps Script, branded PDF export. Calibrated with Amar and Rahul before each module shipped.', link: { url: 'https://bfsi-web-app.netlify.app/', label: 'View platform →' } },
+      { title: 'Weekly BFSI forecast cadence', impact: 'Initiated April 15 — Amar gets a structured WoW delta weekly. Caught the $585K CBRE shift with a week of lead time.' },
+      { title: 'BFSI board deck for Jon', impact: 'Co-built v1 with Amar and Rahul; brand-aligned with Tara Hildabrant and Kal Bowers. Account-level wins narrative from Rahul Gupte (Apollo, BlackRock, Goldman).' },
+      { title: 'BFSI dev tagging cleanup in COR sheet', impact: 'Corrected tagging across Apollo, BlackRock, Goldman, CBRE devs for consistent finance reporting.' },
+      { title: 'Daniel Harron alignment', impact: 'Initiated conversations to sync BFSI Platform with the broader TI Platform roadmap.' },
     ]
   },
 ]
