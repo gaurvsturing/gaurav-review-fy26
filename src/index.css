@@ -313,28 +313,9 @@ h1, h2, h3, h4, h5, h6 {
 .icon-square-orange { background: #fde7d3; color: #ed8138; }
 
 /* === MODAL (drilldown for KPI tiles) === */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; /* full viewport overlay, sidebar is covered by the scrim (matches BFSI) */
-  background: rgba(15, 15, 15, 0.55);
-  backdrop-filter: blur(4px);
-  z-index: 200; /* above sidebar (z-index 50) */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-  overflow: hidden; /* card handles its own scroll */
-  animation: fadeIn 0.2s ease;
-}
-
-@media (max-width: 1023px) {
-  .modal-overlay {
-    padding: 16px;
-  }
-}
+/* Modal overlay/card positioning is set via inline styles in DrilldownModal
+   to bypass CSS caching/specificity issues. Keyframes referenced by those
+   inline styles remain below. */
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -346,25 +327,10 @@ h1, h2, h3, h4, h5, h6 {
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.modal-card {
-  background: white;
-  border-radius: 20px;
-  width: 100%;
-  max-width: 720px;
-  max-height: calc(100vh - 48px); /* never exceeds viewport */
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 24px 48px rgba(0,0,0,0.18);
-  position: relative;
-  animation: scaleIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden; /* contains the inner scroll */
-  min-height: 0; /* critical: allows flex child to shrink below content height */
-}
-
-@media (max-width: 1023px) {
-  .modal-card {
-    max-height: calc(100vh - 32px);
-  }
+/* For centered modals — preserves the -50%/-50% centering offset throughout the animation */
+@keyframes modalScaleIn {
+  from { opacity: 0; transform: translate(-50%, -48%) scale(0.96); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 }
 
 .modal-header {
@@ -528,7 +494,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 640px) {
-  .modal-overlay { padding: 16px; }
   .modal-header { padding: 20px 20px 16px; flex-wrap: wrap; }
   .modal-body { padding: 20px; }
   .modal-footer { padding: 14px 20px; }
@@ -732,7 +697,6 @@ section + section {
   .main-inner { padding: 0 !important; max-width: 100% !important; }
   .card, .kpi-tile { box-shadow: none !important; transform: none !important; border: 1px solid #ededed !important; page-break-inside: avoid; }
   .kpi-drill { display: none !important; }
-  .modal-overlay { display: none !important; }
   section { page-break-inside: avoid; margin-top: 32px !important; }
   section + section { margin-top: 32px !important; }
   .section-title { font-size: 22px !important; }

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import * as Dialog from '@radix-ui/react-dialog'
 import {
   TrendingUp, Users, MessageSquareQuote, Target, Compass,
   Download, ExternalLink, ChevronDown, ChevronRight, Menu, X,
@@ -47,7 +48,7 @@ const KPI_TILES = [
         {
           heading: 'Role-based access from day one',
           items: [
-            { strong: 'Leadership / Finance / TA / Delivery', text: 'each role sees only the data appropriate to it' },
+            { strong: 'Leadership / Finance / Fulfillment / Delivery', text: 'each role sees only the data appropriate to it' },
             { strong: 'Sensitive-field stripping at the Apps Script middleware layer', text: 'base salary, fully-loaded cost, hire date, email IDs never reach the client regardless of role' },
           ]
         },
@@ -88,7 +89,6 @@ const KPI_TILES = [
             { strong: 'Apollo Global Management', text: '$1.48M — largest BFSI account, weekly tracked' },
             { strong: 'ADS Securities', text: '$189K' },
             { strong: 'BlackRock', text: '$112K — variance reported with full root-cause' },
-            { strong: 'Fiserv', text: 'Onboarding in progress' },
           ]
         },
         {
@@ -181,7 +181,7 @@ const QUESTIONS = [
       {
         heading: 'Where I had the most impact',
         bullets: [
-          { strong: 'BFSI Master Platform', text: ' — conceived, built, and shipped the live React web application with six modules (Revenue Forecast, Talent Pool, Recruiting, P&L, Burn Sheets, Delivery), role-based access (Leadership/Finance/TA/Delivery), live Google Sheets data via Apps Script middleware, and branded PDF burn-sheet export. Now in alignment conversations with Daniel Harron\'s broader TI Platform.', link: { url: 'https://bfsi-web-app.netlify.app/', label: 'View live →' } },
+          { strong: 'BFSI Master Platform', text: ' — conceived, built, and shipped the live React web application with six modules (Revenue Forecast, Talent Pool, Recruiting, P&L, Burn Sheets, Delivery), role-based access (Leadership/Finance/Fulfillment/Delivery), live Google Sheets data via Apps Script middleware, and branded PDF burn-sheet export. Now in alignment conversations with Daniel Harron\'s broader TI Platform.', link: { url: 'https://bfsi-web-app.netlify.app/', label: 'View live →' } },
           { strong: 'BFSI revenue forecast ownership', text: ' — Q1\'26 actualized at $1.78M, with Apollo Global Management at $1.48M, ADS Securities at $189K, and BlackRock at $112K. Q2\'26 forecast at $2.91M, with the FY26 BFSI vertical tracking to ~$10.65M total. Initiated and now run a weekly WoW forecast cadence to Amar Duggal, with full account-level variance reporting after every monthly close.' },
           { strong: 'Outbound Reporting Initiative', text: ' — centralized cross-channel reporting across SDR cadences, AE cadences, Job Recruiter Campaigns, Paid Marketing, and Email; auto-refresh every 24 hours; operationalized January 1, 2026. Coordinated with Abhilash Kandwal, Aditya Bam, Madhan Kumar, and Kal Bowers without a project manager.' },
           { strong: 'Ti Projects Sales Dashboard', text: ' — Salesforce-native one-stop dashboard rolled out to TI Projects AEs (Dave Critchley, Erika Rhinehart, Joydip Mukherji) on September 30, 2025. Active devs and billing rates, opportunities, deals won, pipeline, and Tradeshow/Event leads — all filtered to Account Owner.' },
@@ -189,7 +189,7 @@ const QUESTIONS = [
         ]
       },
       {
-        heading: 'Where I fell short',
+        heading: 'My active growth area',
         prose: 'Honest answer: my biggest growth area this year was learning to walk into high-stakes leadership conversations with the strategic ask, recommendation, and stakeholder alignment already in motion — not just the substance. The shift from briefing senior leaders on what I have done to framing the one decision that needs to be made is the difference between IC4 work and IC6 work, and it is the part of the role I am most actively developing. The work this year has given me the substance; the next step is consistently turning that substance into the clearest possible recommendation, walked through with the right people, before the room gets together.'
       }
     ]
@@ -199,11 +199,11 @@ const QUESTIONS = [
     number: '02',
     title: 'Values in Action',
     subtitle: 'Provide an example of where you demonstrated our values most strongly, and an example of where you could have embodied them more.',
-    bluf: 'Built the BFSI Platform because the client (Amar, Rahul, the BFSI vertical) needed it — Client First and AI Forward intertwined. Could have brought my immediate team into the joy of the wins more deliberately — Work with Joy.',
+    bluf: 'Built the BFSI Platform to give senior leadership (Amar, Rahul) unified visibility today, with a longer-term path Amar sees of giving external BFSI clients limited access to their own account data — Client First and AI Forward intertwined. Could have brought my immediate team into the joy of the wins more deliberately — Work with Joy.',
     sections: [
       {
         heading: 'Where I demonstrated our values most strongly — Client First (and AI Forward, intertwined)',
-        prose: 'The BFSI Master Platform is the cleanest example. Amar Duggal and Rahul Bora needed unified visibility into BFSI operations, but the data was scattered across at least four sheets, with brittle BigQuery connections, manual reconciliation, and no role-appropriate access for Finance vs Delivery vs TA. The most obvious move would have been to build a better spreadsheet. Instead I built the right artifact for what they actually needed: a real platform with role-gated views, live data, and a branded export they can share with their clients\u2019 executive teams. The platform exists because the client needed it to exist, and shipped on a startup-speed timeline because I treated it as a real product, not a side project.'
+        prose: 'The BFSI Master Platform is the cleanest example. Amar Duggal and Rahul Bora — senior leadership for the BFSI vertical — needed unified visibility into operations, but the data was scattered across at least four sheets, with brittle BigQuery connections, manual reconciliation, and no role-appropriate access for Finance vs Delivery vs Fulfillment. The most obvious move would have been to build a better spreadsheet. Instead I built the right artifact for what they actually needed: a real platform with role-gated views, live data, and a branded export. Amar sees a longer-term path where this platform becomes a true Client First tool — eventually giving external BFSI clients limited access to know everything about their respective accounts. The platform shipped on a startup-speed timeline because I treated it as a real product, not a side project.'
       },
       {
         heading: '',
@@ -279,7 +279,7 @@ const QUARTERS = [
     period: 'Apr 2026 — QTD',
     headline: 'The IC6 leap: BFSI Master Platform',
     initiatives: [
-      { title: 'BFSI Master Platform — shipped', impact: 'Live React platform with 6 modules, role-based access (Leadership/Finance/TA/Delivery), Apps Script middleware for live data, branded PDF burn-sheet export. Calibration loops with Amar and Rahul before each module shipped.', link: { url: 'https://bfsi-web-app.netlify.app/', label: 'View platform →' } },
+      { title: 'BFSI Master Platform — shipped', impact: 'Live React platform with 6 modules, role-based access (Leadership/Finance/Fulfillment/Delivery), Apps Script middleware for live data, branded PDF burn-sheet export. Calibration loops with Amar and Rahul before each module shipped.', link: { url: 'https://bfsi-web-app.netlify.app/', label: 'View platform →' } },
       { title: 'Weekly BFSI forecast cadence', impact: 'Initiated April 15 — every week Amar gets a structured WoW delta with quarterly forecast, weekly change, commentary, and account-level breakdown. Caught the $585K CBRE shift to Emerging Org with a week of lead time.' },
       { title: 'BFSI board deck for Jon and senior leadership', impact: 'Co-built v1 with Amar and Rahul; partnered with Tara Hildabrant and Kal Bowers to brand-align. Sourced account-level wins narrative from Rahul Gupte for Apollo, BlackRock, Goldman Sachs.' },
       { title: 'BFSI dev tagging cleanup in COR sheet', impact: 'Corrected tagging across Apollo, BlackRock, Goldman, CBRE devs (TI Projects vs Bench) for consistent downstream finance reporting.' },
@@ -376,7 +376,11 @@ function Sidebar({ active, setActive, mobileOpen, setMobileOpen, onDownload }) {
         {/* Header */}
         <div className="sidebar-header">
           <div className="sidebar-logo">
-            <span style={{ color: 'white', fontWeight: 700, fontSize: '20px', letterSpacing: '-0.02em' }}>G</span>
+            <img
+              src={`${import.meta.env.BASE_URL}turing-logo.jpg`}
+              alt="Turing"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }}
+            />
           </div>
           <div style={{ flex: 1, minWidth: 0 }}>
             <div className="sidebar-brand-title">Gaurav Kumar Singh</div>
@@ -439,7 +443,13 @@ function MobileTopBar({ setMobileOpen }) {
   return (
     <div className="mobile-topbar no-print">
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <div style={{ width: 32, height: 32, borderRadius: 8, background: '#0f0f0f', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 14 }}>G</div>
+        <div style={{ width: 32, height: 32, borderRadius: 8, background: '#0f0f0f', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+          <img
+            src={`${import.meta.env.BASE_URL}turing-logo.jpg`}
+            alt="Turing"
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </div>
         <div style={{ fontWeight: 600, fontSize: 14 }}>Year in Review</div>
       </div>
       <button
@@ -564,93 +574,106 @@ function DrilldownModal({ tile, onClose }) {
   const Icon = tile.icon
   const d = tile.drilldown
 
-  // Lock scroll while modal is open
-  useEffect(() => {
-    const original = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
-    return () => { document.body.style.overflow = original }
-  }, [])
-
   return (
-    <div
-      className="modal-overlay no-print"
-      onClick={onClose}
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="drilldown-title"
-    >
-      <div className="modal-card" onClick={(e) => e.stopPropagation()}>
-        {/* Header */}
-        <div className="modal-header">
-          <div className={`modal-header-icon icon-square-${tile.accent}`}>
-            <Icon size={22} />
-          </div>
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div className="modal-headline-value">
-              {tile.value} · {tile.label}
+    <Dialog.Root open={true} onOpenChange={(open) => { if (!open) onClose() }}>
+      <Dialog.Portal>
+        <Dialog.Overlay
+          style={{
+            position: 'fixed',
+            inset: 0,
+            background: 'rgba(15, 15, 15, 0.55)',
+            backdropFilter: 'blur(4px)',
+            WebkitBackdropFilter: 'blur(4px)',
+            zIndex: 9999,
+            animation: 'fadeIn 0.2s ease',
+          }}
+        />
+        <Dialog.Content
+          aria-describedby={undefined}
+          style={{
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: 'calc(100vw - 48px)',
+            maxWidth: 720,
+            maxHeight: 'calc(100vh - 48px)',
+            background: 'white',
+            borderRadius: 20,
+            boxShadow: '0 24px 48px rgba(0,0,0,0.18)',
+            zIndex: 10000,
+            display: 'flex',
+            flexDirection: 'column',
+            overflow: 'hidden',
+            animation: 'modalScaleIn 0.22s cubic-bezier(0.4, 0, 0.2, 1)',
+          }}
+        >
+          {/* Header */}
+          <div className="modal-header" style={{ flexShrink: 0 }}>
+            <div className={`modal-header-icon icon-square-${tile.accent}`}>
+              <Icon size={22} />
             </div>
-            <h3 id="drilldown-title" className="modal-title">
-              {d.title}
-            </h3>
-          </div>
-          <button
-            onClick={onClose}
-            className="modal-close"
-            aria-label="Close"
-          >
-            <X size={20} />
-          </button>
-        </div>
-
-        {/* Body */}
-        <div className="modal-body">
-          {d.blurb && (
-            <p className="modal-blurb">{d.blurb}</p>
-          )}
-
-          {d.sections.map((sec, i) => (
-            <div key={i} className="modal-section">
-              {sec.heading && (
-                <div className="modal-section-heading">{sec.heading}</div>
-              )}
-              {sec.items && (
-                <ul className="modal-list">
-                  {sec.items.map((item, j) => (
-                    <li key={j} className="modal-list-item">
-                      <ChevronRight size={14} className="modal-list-item-marker" />
-                      <span><strong>{item.strong}</strong> — {item.text}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div className="modal-headline-value">
+                {tile.value} · {tile.label}
+              </div>
+              <Dialog.Title asChild>
+                <h3 className="modal-title">{d.title}</h3>
+              </Dialog.Title>
             </div>
-          ))}
+            <Dialog.Close asChild>
+              <button className="modal-close" aria-label="Close">
+                <X size={20} />
+              </button>
+            </Dialog.Close>
+          </div>
 
-          {d.cta && (
-            <a
-              href={d.cta.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="modal-cta"
-            >
-              {d.cta.label}
-              <ExternalLink size={14} />
-            </a>
-          )}
-        </div>
+          {/* Body */}
+          <div className="modal-body" style={{ flex: '1 1 auto', overflowY: 'auto', minHeight: 0 }}>
+            {d.blurb && <p className="modal-blurb">{d.blurb}</p>}
 
-        {/* Footer with Close button (matches BFSI pattern) */}
-        <div className="modal-footer">
-          <button
-            type="button"
-            onClick={onClose}
-            className="modal-footer-close"
-          >
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
+            {d.sections.map((sec, i) => (
+              <div key={i} className="modal-section">
+                {sec.heading && (
+                  <div className="modal-section-heading">{sec.heading}</div>
+                )}
+                {sec.items && (
+                  <ul className="modal-list">
+                    {sec.items.map((item, j) => (
+                      <li key={j} className="modal-list-item">
+                        <ChevronRight size={14} className="modal-list-item-marker" />
+                        <span><strong>{item.strong}</strong> — {item.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+
+            {d.cta && (
+              <a
+                href={d.cta.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="modal-cta"
+              >
+                {d.cta.label}
+                <ExternalLink size={14} />
+              </a>
+            )}
+          </div>
+
+          {/* Footer with Close button */}
+          <div className="modal-footer" style={{ flexShrink: 0 }}>
+            <Dialog.Close asChild>
+              <button type="button" className="modal-footer-close">
+                Close
+              </button>
+            </Dialog.Close>
+          </div>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
   )
 }
 
@@ -1148,24 +1171,15 @@ export default function App() {
   }, [])
 
   const handleDownload = async () => {
-    const html2pdfModule = await import('html2pdf.js')
-    const html2pdf = html2pdfModule.default
-
-    document.body.classList.add('printing')
-    const element = contentRef.current
-    const opt = {
-      margin: [10, 10, 10, 10],
-      filename: 'Gaurav_Kumar_Singh_Year_in_Review_FY25-26.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true, letterRendering: true },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
-    }
-    try {
-      await html2pdf().set(opt).from(element).save()
-    } finally {
-      document.body.classList.remove('printing')
-    }
+    // Lazy-load the PDF generator (keeps initial bundle small)
+    const { generateReviewPDF } = await import('./pdfGenerator.js')
+    generateReviewPDF({
+      kpis: KPI_TILES,
+      questions: QUESTIONS,
+      quarters: QUARTERS,
+      benchmarks: BENCHMARKS,
+      forwardAsks: FORWARD_ASKS,
+    })
   }
 
   return (
